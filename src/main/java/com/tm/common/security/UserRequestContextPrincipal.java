@@ -1,21 +1,24 @@
 package com.tm.common.security;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import java.util.ArrayList;
 import java.util.List;
 
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class UserRequestContextPrincipal {
-    private Long userId;
+    private Long id;
     private String userName;
     private String email;
     private Boolean hasSuperSystemRole;
-    private List<PrivilegeModel> privilegeModels = new ArrayList<>();
+    private List<PrivilegeModel> privileges = new ArrayList<>();
 
-    public Long getUserId() {
-        return userId;
+    public Long getId() {
+        return id;
     }
 
-    public void setUserId(Long userId) {
-        this.userId = userId;
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public String getUserName() {
@@ -42,11 +45,11 @@ public class UserRequestContextPrincipal {
         this.hasSuperSystemRole = hasSuperSystemRole;
     }
 
-    public List<PrivilegeModel> getPrivilegeModels() {
-        return privilegeModels;
+    public List<PrivilegeModel> getPrivileges() {
+        return privileges;
     }
 
-    public void setPrivilegeModels(List<PrivilegeModel> privilegeModels) {
-        this.privilegeModels = privilegeModels;
+    public void setPrivileges(List<PrivilegeModel> privileges) {
+        this.privileges = privileges;
     }
 }

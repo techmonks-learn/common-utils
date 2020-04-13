@@ -2,7 +2,7 @@ package com.tm.common.security;
 
 public class PrivilegeModel {
     private Long  Id;
-    private String name;
+    private String code;
     private String componentName;
 
     public Long getId() {
@@ -13,12 +13,12 @@ public class PrivilegeModel {
         Id = id;
     }
 
-    public String getName() {
-        return name;
+    public String getCode() {
+        return code;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setCode(String code) {
+        this.code = code;
     }
 
     public String getComponentName() {

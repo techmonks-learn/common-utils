@@ -10,5 +10,11 @@ public class Constants {
         public static String X_SPAN_EXPORT = "X-Span-Export"; //Not Used?
         public static String EVENT_PRODUCER_SERVICE_NAME = "Produced-By";
         public static String X_ERROR_TYPE = "X-ErrorType";
+
+    }
+
+    public static class Authorization{
+        public static String SPACE=" ";
+        public static String BEARER_TOKEN="BEARER";
     }
 }
